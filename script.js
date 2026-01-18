@@ -6,8 +6,8 @@
    ========================================================== */
 
 // ---------- SETTINGS (fill these) ----------
-const SUPABASE_URL = 'https://YOUR_PROJECT_ID.supabase.co';
-const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
+const SUPABASE_URL = 'https://ttqieprmbcjvxumetshe.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR0cWllcHJtYmNqdnh1bWV0c2hlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njg3NTAwMzcsImV4cCI6MjA4NDMyNjAzN30.DlRPTl0QWYvMlUx4rM3-kond1iJ-flp2h-JBgVZYHu8';
 
 // Storage bucket names (create them in Supabase Storage)
 const BUCKET_CONTACT_FILES = 'contact-files';
