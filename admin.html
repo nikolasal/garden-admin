@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin | Κηπουρικές Υπηρεσίες</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Αρχική">
+        <span class="brand-text">
+          <span class="brand-line1">ADMIN PANEL</span>
+          <span class="brand-line2">Έγκριση κριτικών · Μηνύματα · Αρχεία</span>
+        </span>
+      </a>
+
+      <nav class="menu" aria-label="Μενού">
+        <a href="index.html" class="btn btn-small">⬅ Επιστροφή site</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="admin-modal" style="margin:0 auto; max-width:980px;">
+          <div id="loginView">
+            <div class="section-head" style="text-align:left; margin-bottom:12px;">
+              <h2 style="margin:0;">🔐 Σύνδεση Admin</h2>
+              <p style="margin-top:8px;">Σύνδεση με Supabase email/password.</p>
+            </div>
+            <form id="loginForm" class="review-form" style="background:rgba(255,255,255,.02);">
+              <label>
+                Email
+                <input name="email" type="email" placeholder="you@email.com" required />
+              </label>
+              <label>
+                Κωδικός
+                <input name="password" type="password" placeholder="••••••••" required />
+              </label>
+              <div class="form-actions">
+                <button class="btn submit-btn" type="submit"><span class="spinner"></span>Σύνδεση</button>
+                <div id="loginMsg" class="form-hint" aria-live="polite"></div>
+              </div>
+              <p class="form-hint" style="margin-top:10px;">
+                Αν δεν έχεις admin χρήστη, φτιάξε τον μέσα από Supabase Auth και βάλε <code>is_admin=true</code> στον πίνακα <code>users</code>.
+              </p>
+            </form>
+          </div>
+
+          <div id="panelView" hidden>
+            <header class="admin-header">
+              <h2 id="adminTitle">🔐 Admin Panel</h2>
+              <div class="admin-actions">
+                <button id="refreshBtn" class="btn btn-ghost" type="button">↻ Ανανέωση</button>
+                <button id="logoutBtn" class="btn btn-ghost" type="button">Αποσύνδεση</button>
+              </div>
+            </header>
+
+            <nav class="admin-tabs" role="tablist">
+              <button class="tab-btn active" data-tab="reviews" type="button">Κριτικές</button>
+              <button class="tab-btn" data-tab="messages" type="button">Μηνύματα</button>
+              <button class="tab-btn" data-tab="files" type="button">Αρχεία</button>
+            </nav>
+
+            <section class="admin-body">
+              <section id="tab-reviews" class="admin-tab" data-tab="reviews">
+                <div class="admin-tools">
+                  <div class="filters">
+                    <button class="filter-btn active" data-filter="pending" type="button">Pending</button>
+                    <button class="filter-btn" data-filter="approved" type="button">Approved</button>
+                    <button class="filter-btn" data-filter="archived" type="button">Archived</button>
+                    <button class="filter-btn" data-filter="all" type="button">All</button>
+                  </div>
+                  <input id="reviewsSearch" class="admin-search" placeholder="Αναζήτηση (όνομα ή κείμενο)" />
+                </div>
+                <div id="reviewsAdminList" class="admin-list"></div>
+              </section>
+
+              <section id="tab-messages" class="admin-tab" data-tab="messages" hidden>
+                <div class="admin-tools">
+                  <div class="filters">
+                    <button class="msg-filter-btn active" data-filter="new" type="button">New</button>
+                    <button class="msg-filter-btn" data-filter="read" type="button">Read</button>
+                    <button class="msg-filter-btn" data-filter="archived" type="button">Archived</button>
+                    <button class="msg-filter-btn" data-filter="all" type="button">All</button>
+                  </div>
+                  <input id="messagesSearch" class="admin-search" placeholder="Αναζήτηση μηνυμάτων" />
+                </div>
+                <div id="messagesAdminList" class="admin-list"></div>
+              </section>
+
+              <section id="tab-files" class="admin-tab" data-tab="files" hidden>
+                <div class="admin-tools">
+                  <div class="filters">
+                    <button class="file-filter-btn active" data-filter="message" type="button">Μηνύματα</button>
+                    <button class="file-filter-btn" data-filter="review" type="button">Κριτικές</button>
+                    <button class="file-filter-btn" data-filter="all" type="button">All</button>
+                  </div>
+                  <input id="filesSearch" class="admin-search" placeholder="Αναζήτηση (όνομα αρχείου / ID)" />
+                </div>
+                <div id="filesAdminList" class="admin-list"></div>
+              </section>
+            </section>
+
+            <footer class="admin-footer"><small class="form-hint">Supabase Auth + RLS</small></footer>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- Supabase -->
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

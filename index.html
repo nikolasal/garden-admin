@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Κηπουρικές Υπηρεσίες | [Το Όνομά σου]</title>
+  <meta name="description" content="Συντηρήσεις, διαμορφώσεις κήπων, απολυμάνσεις, αυτόματο πότισμα (ηλεκτροβάνες). Καθαρή και επαγγελματική δουλειά." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Μετάβαση στο περιεχόμενο</a>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Αρχική">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+            <defs>
+              <linearGradient id="flowerGrad" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#9FF9C7" />
+                <stop offset="0.45" stop-color="#2FD16B" />
+                <stop offset="1" stop-color="#1FA156" />
+              </linearGradient>
+              <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+                <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0b2a14" flood-opacity="0.25"/>
+              </filter>
+            </defs>
+
+            <g filter="url(#softShadow)">
+              <circle cx="36" cy="36" r="30" fill="url(#flowerGrad)" />
+
+              <g transform="translate(36,30)" class="flower">
+                <!-- petals: use ellipses rotated around center -->
+                <ellipse class="petal" rx="7" ry="14" fill="#FFFFFF" transform="rotate(0) translate(0,-12)" />
+                <ellipse class="petal" rx="7" ry="14" fill="#FFFFFF" transform="rotate(60) translate(0,-12)" />
+                <ellipse class="petal" rx="7" ry="14" fill="#FFFFFF" transform="rotate(120) translate(0,-12)" />
+                <ellipse class="petal" rx="7" ry="14" fill="#FFFFFF" transform="rotate(180) translate(0,-12)" />
+                <ellipse class="petal" rx="7" ry="14" fill="#FFFFFF" transform="rotate(240) translate(0,-12)" />
+                <ellipse class="petal" rx="7" ry="14" fill="#FFFFFF" transform="rotate(300) translate(0,-12)" />
+
+                <!-- center -->
+                <circle r="5" fill="#2FD16B" />
+
+                <!-- stem and leaf -->
+                <path d="M0 8 v14" stroke="#145B2E" stroke-width="2.5" stroke-linecap="round" fill="none" />
+                <path d="M0 18 c8 6 12 6 18 4" stroke="#145B2E" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6" />
+              </g>
+            </g>
+          </svg>
+        </span>
+
+        <span class="brand-text">
+          <span class="brand-line1">Ο ΚΗΠΟΥΡΟΣ ΣΟΥ</span>
+          <span class="brand-line2">Φροντίδα με στυλ</span>
+        </span>
+      </a>
+
+      <nav class="menu" aria-label="Μενού">
+        <a href="#top">Αρχική</a>
+        <a href="#services">Υπηρεσίες</a>
+        <a href="#work">Δουλειές</a>
+        <a href="#about">Σχετικά</a>
+        <a href="#contact" class="btn btn-small">Επικοινωνία</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Άνοιγμα μενού" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="container hero" id="top">
+      <div class="hero-copy">
+        <p class="pill">Καθαρή · Συνεπής · Επαγγελματική δουλειά</p>
+        <h1>Φροντίδα κήπου που φαίνεται από την πρώτη μέρα.</h1>
+        <p class="lead">
+          Συντηρήσεις, διαμορφώσεις, απολυμάνσεις, εγκατάσταση αυτόματου ποτίσματος (ηλεκτροβάνες) και ό,τι αφορά την κηπουρική.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn" href="tel:+30XXXXXXXXXX">📞 Κάλεσε τώρα</a>
+          <a class="btn btn-ghost" href="https://wa.me/30XXXXXXXXXX" target="_blank" rel="noopener">
+            💬 WhatsApp
+          </a>
+        </div>
+
+        <div class="hero-badges">
+          <div class="badge">
+            <strong>Γρήγορη ανταπόκριση</strong>
+            <span>Συνεννόηση χωρίς καθυστέρηση</span>
+          </div>
+          <div class="badge">
+            <strong>Προσοχή στη λεπτομέρεια</strong>
+            <span>Καθαρό αποτέλεσμα</span>
+          </div>
+          <div class="badge">
+            <strong>Σωστή τεχνική</strong>
+            <span>Πότισμα, ηλεκτροβάνες & έλεγχος</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-card">
+          <img src="assets/hero.jpg" alt="Κηπουρικές εργασίες σε κήπο" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>Υπηρεσίες</h2>
+          <p>Ό,τι χρειάζεται ο κήπος σου — από απλή συντήρηση μέχρι πλήρη ανανέωση.</p>
+        </div>
+
+        <div class="grid cards">
+          <article class="card">
+            <h3>Συντήρηση Κήπων</h3>
+            <p>Κούρεμα, καθαρισμός, περιποίηση φυτών, εποχιακές εργασίες.</p>
+          </article>
+
+          <article class="card">
+            <h3>Διαμόρφωση Κήπων</h3>
+            <p>Οργάνωση χώρου, φυτεύσεις, βελτίωση εικόνας και λειτουργικότητας.</p>
+          </article>
+
+          <article class="card">
+            <h3>Απολυμάνσεις / Καθαρισμοί</h3>
+            <p>Φροντίδα χώρου με σωστή εφαρμογή και προσοχή στο περιβάλλον.</p>
+          </article>
+
+          <article class="card">
+            <h3>Αυτόματο Πότισμα</h3>
+            <p>Εγκατάσταση/επισκευή, ηλεκτροβάνες, έλεγχος διαρροών, ρυθμίσεις.</p>
+          </article>
+
+          <article class="card">
+            <h3>Κλαδέματα / Περιποίηση</h3>
+            <p>Καθαρό κλάδεμα με ασφάλεια και σωστή τεχνική.</p>
+          </article>
+
+          <article class="card">
+            <h3>Εκτίμηση & Πρόταση</h3>
+            <p>Βλέπουμε τον χώρο και σου λέω τι συμφέρει να γίνει.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works / Process -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head">
+          <h2>Πώς δουλεύουμε</h2>
+          <p>Γρήγορα, καθαρά και με σεβασμό στον χώρο σας — τρία απλά βήματα.</p>
+        </div>
+
+        <div class="grid process">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Επίσκεψη & Εκτίμηση</h3>
+            <p>Ραντεβού για να δούμε τον χώρο και να προτείνουμε λύσεις.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>Σχέδιο & Προσφορά</h3>
+            <p>Σου στέλνω προτεινόμενη εργασία με κοστολόγηση και χρονοδιάγραμμα.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>Εκτέλεση & Παράδοση</h3>
+            <p>Εκτελούμε τη δουλειά με σεβασμό και καθαριότητα, σύμφωνα με τη συμφωνία.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work / Portfolio -->
+    <section class="section section-alt" id="work">
+      <div class="container">
+        <div class="section-head">
+          <h2>Δουλειές</h2>
+          <p>Πριν/Μετά και καθαρές λεπτομέρειες από πραγματικές εργασίες.</p>
+        </div>
+
+        <div class="grid gallery">
+          <figure class="shot">
+            <img src="assets/p1.jpg" alt="Εργασία κήπου 1" loading="lazy">
+            <figcaption>Συντήρηση & καθαρισμός</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/p2.jpg" alt="Εργασία κήπου 2" loading="lazy">
+            <figcaption>Διαμόρφωση κήπου</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/p3.jpg" alt="Εργασία κήπου 3" loading="lazy">
+            <figcaption>Αυτόματο πότισμα</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/p4.jpg" alt="Εργασία κήπου 4" loading="lazy">
+            <figcaption>Περιποίηση φυτών</figcaption>
+          </figure>
+        </div>
+
+        <div class="note">
+          <p><strong>Tip:</strong> Βάλε 8–12 φωτογραφίες. Οι πελάτες πείθονται από εικόνα περισσότερο απ’ όλα.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="about-copy">
+          <h2>Λίγα λόγια για μένα</h2>
+          <p>
+            Είμαι κηπουρός και δουλεύω με καθαριότητα, συνέπεια και σεβασμό στον χώρο σας.
+            Στόχος μου είναι να αφήνω τον κήπο <strong>καλύτερο</strong> απ’ ό,τι τον βρήκα.
+          </p>
+
+          <ul class="ticks">
+            <li>Συνεπής επικοινωνία</li>
+            <li>Καθαρό αποτέλεσμα</li>
+            <li>Τεχνική γνώση σε πότισμα/ηλεκτροβάνες</li>
+          </ul>
+
+          <div class="about-cta">
+            <a class="btn" href="#contact">Ζήτα προσφορά</a>
+            <a class="btn btn-ghost" href="tel:+30XXXXXXXXXX">Άμεση κλήση</a>
+          </div>
+        </div>
+
+        <div class="about-box">
+          <h3>Περιοχή εξυπηρέτησης</h3>
+          <p>Πρόσθεσε εδώ τις περιοχές που δουλεύεις (π.χ. Αθήνα, Δυτικά, κ.λπ.).</p>
+          <div class="mini">
+            <div><span>⏱</span> Ραντεβού κατόπιν συνεννόησης</div>
+            <div><span>🧾</span> Καθαρή συμφωνία πριν ξεκινήσουμε</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer reviews: submission form + live list (replaces static testimonials) -->
+    <section id="testimonials" class="section testimonials">
+      <div class="container">
+        <div class="section-head">
+          <h2>Αφήστε την κριτική σας</h2>
+          <p>Οι πραγματικές εμπειρίες βοηθούν άλλους πελάτες — μοιραστείτε τη δική σας.</p>
+        </div>
+
+        <div class="reviews-wrap" style="margin-top:18px; display:grid; grid-template-columns:1fr 420px; gap:24px;">
+          <div>
+            <form id="reviewForm" class="review-form" aria-label="Φόρμα κριτικής">
+              <label>
+                Όνομα
+                <input name="rname" type="text" placeholder="π.χ. Μαρία Παπαδοπούλου" required />
+              </label>
+
+              <label>
+                Βαθμολογία
+                <div class="stars" role="radiogroup" aria-label="Βαθμολογία">
+                  <button type="button" class="star" data-value="1" aria-label="1 αστέρι">☆</button>
+                  <button type="button" class="star" data-value="2" aria-label="2 αστέρια">☆</button>
+                  <button type="button" class="star" data-value="3" aria-label="3 αστέρια">☆</button>
+                  <button type="button" class="star" data-value="4" aria-label="4 αστέρια">☆</button>
+                  <button type="button" class="star" data-value="5" aria-label="5 αστέρια">☆</button>
+                </div>
+              </label>
+
+              <label>
+                Κριτική
+                <textarea name="rtext" rows="5" placeholder="Περιγράψτε την εμπειρία σας..." required></textarea>
+              </label>
+
+              <div class="form-actions" style="display:flex; gap:12px; align-items:center; margin-top:8px;">
+                <button class="btn submit-btn" type="submit"><span class="spinner"></span>Υποβολή</button>
+                <div id="reviewMessage" class="form-hint" aria-live="polite"></div>
+              </div>
+            </form>
+          </div>
+
+          <aside>
+            <div class="section-head" style="text-align:left; margin-bottom:12px;">
+              <h3 style="margin:0;">Πρόσφατες κριτικές</h3>
+            </div>
+            <div id="reviewList" class="review-list" aria-live="polite"></div>
+            <div style="margin-top:12px;">
+              <button id="openAdminBtn" class="btn btn-ghost">🔐 Admin</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <!-- Admin overlay is created dynamically by script when authenticated -->
+
+    <!-- Contact -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Επικοινωνία</h2>
+          <p>Στείλε μήνυμα και θα σου απαντήσω άμεσα.</p>
+        </div>
+
+        <div class="contact">
+          <div class="contact-cards">
+            <a class="contact-card" href="tel:+306943757682">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#phone"></use></svg>
+              <div>
+                <strong>Τηλέφωνο</strong>
+                <span>+30 694 375 7682</span>
+              </div>
+            </a>
+
+            <a class="contact-card" href="https://wa.me/306943757682" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#whatsapp"></use></svg>
+              <div>
+                <strong>WhatsApp</strong>
+                <span>Άμεση επικοινωνία μέσω WhatsApp</span>
+              </div>
+            </a>
+
+            <a class="contact-card" href="mailto:you@email.com">
+              <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#mail"></use></svg>
+              <div>
+                <strong>Email</strong>
+                <span>you@email.com</span>
+              </div>
+            </a>
+          </div>
+
+          <form class="form" id="contactForm">
+            <label>
+              Ονοματεπώνυμο
+              <input name="name" type="text" placeholder="π.χ. Γιώργος Παπαδόπουλος" required />
+            </label>
+
+            <label>
+              Τηλέφωνο
+              <input name="phone" type="tel" placeholder="π.χ. 69XXXXXXXX" required />
+            </label>
+
+            <label>
+              Μήνυμα
+              <textarea name="message" rows="5" placeholder="Περιγράψτε τις ανάγκες σας (π.χ. συντήρηση, διαμόρφωση κήπου, αυτόματο πότισμα κ.ά.)" required></textarea>
+            </label>
+
+            <label>
+              Επισύναψη φωτογραφιών κήπου (προαιρετικά)
+              <input id="gardenFiles" name="gardenFiles" type="file" accept="image/*,application/pdf" multiple />
+            </label>
+
+            <div id="filePreview" class="file-preview" aria-live="polite"></div>
+
+            <button class="btn" type="submit">Αποστολή</button>
+            <p class="form-hint">Μπορείτε να επισυνάψετε φωτογραφίες του χώρου σας για καλύτερη εκτίμηση.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> [Το Όνομά σου] · Επαγγελματικές Κηπουρικές Υπηρεσίες</p>
+      <div class="footer-links">
+        <a href="#services">Υπηρεσίες</a>
+        <a href="#work">Δουλειές</a>
+        <a href="#contact">Επικοινωνία</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" role="menu" aria-hidden="true" hidden>
+    <a href="#top">Αρχική</a>
+    <a href="#services">Υπηρεσίες</a>
+    <a href="#work">Δουλειές</a>
+    <a href="#about">Σχετικά</a>
+    <a href="#contact">Επικοινωνία</a>
+  </div>
+
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+  <div id="adminPanelContainer"></div>
+
+  <!-- Supabase (backend: DB + Auth + Storage) -->
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
