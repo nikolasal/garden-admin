@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Admin | Κηπουρικές Υπηρεσίες</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -37,6 +38,7 @@
               <h2 style="margin:0;">🔐 Σύνδεση Admin</h2>
               <p style="margin-top:8px;">Σύνδεση με Supabase email/password.</p>
             </div>
+
             <form id="loginForm" class="review-form" style="background:rgba(255,255,255,.02);">
               <label>
                 Email
@@ -46,14 +48,48 @@
                 Κωδικός
                 <input name="password" type="password" placeholder="••••••••" required />
               </label>
+
               <div class="form-actions">
                 <button class="btn submit-btn" type="submit"><span class="spinner"></span>Σύνδεση</button>
                 <div id="loginMsg" class="form-hint" aria-live="polite"></div>
               </div>
+
+              <div style="margin-top:12px;">
+                <button id="forgotBtn" class="btn btn-ghost btn-small" type="button">
+                  Ξέχασα τον κωδικό
+                </button>
+                <div id="forgotMsg" class="form-hint" aria-live="polite" style="margin-top:8px;"></div>
+              </div>
+
               <p class="form-hint" style="margin-top:10px;">
                 Αν δεν έχεις admin χρήστη, φτιάξε τον μέσα από Supabase Auth και βάλε <code>is_admin=true</code> στον πίνακα <code>users</code>.
               </p>
             </form>
+
+            <!-- Recovery UI (εμφανίζεται μόνο όταν έρχεσαι από το reset email link) -->
+            <div id="resetBox" hidden class="review-form" style="margin-top:14px; background:rgba(255,255,255,.02);">
+              <h3 style="margin:0 0 10px;">🔑 Αλλαγή κωδικού</h3>
+              <p class="form-hint" style="margin:0 0 10px;">
+                Βάλε νέο κωδικό και πάτα αποθήκευση.
+              </p>
+
+              <label>
+                Νέος κωδικός
+                <input id="newPass" type="password" placeholder="Τουλάχιστον 6 χαρακτήρες" />
+              </label>
+
+              <label>
+                Επανάληψη νέου κωδικού
+                <input id="newPass2" type="password" placeholder="Επανάληψη" />
+              </label>
+
+              <div class="form-actions">
+                <button id="saveNewPassBtn" class="btn submit-btn" type="button">
+                  <span class="spinner"></span>Αποθήκευση νέου κωδικού
+                </button>
+                <div id="resetMsg" class="form-hint" aria-live="polite"></div>
+              </div>
+            </div>
           </div>
 
           <div id="panelView" hidden>
