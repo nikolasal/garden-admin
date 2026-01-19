@@ -340,7 +340,7 @@ function renderReviews(){
       <div class="admin-item" data-id="${r.id}">
         <div class="admin-item-main">
           <div>${meta} <small style="margin-left:8px; opacity:.8">(${status})</small></div>
-          <div class="admin-item-text">${escapeHtml(r.text)}</div>
+          <div class="admin-item-text">${escapeHtml(r.content)}</div>
         </div>
         <div class="admin-item-actions">
           ${!r.approved && !r.archived ? `<button class="btn" data-action="approve">Εγκρίνω</button>` : ''}
