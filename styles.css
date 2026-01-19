@@ -867,5 +867,30 @@ input:focus, textarea:focus{
     height: 220px !important;
   }
 }
+.mobile-cta-bar{
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  display: none;
+  gap: 10px;
+  z-index: 999;
+}
+.mobile-cta-bar a{
+  flex: 1;
+  text-align: center;
+  padding: 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #0b1a0b;
+}
+.mobile-cta-bar .call{ background: linear-gradient(135deg,#22c55e,#16a34a); }
+.mobile-cta-bar .wa{ background: #25d366; }
+
+@media (max-width: 768px){
+  .mobile-cta-bar{ display:flex; }
+}
+
 
 
