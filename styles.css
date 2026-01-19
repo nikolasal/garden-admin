@@ -742,4 +742,86 @@ input:focus, textarea:focus{
 .admin-item-actions .btn{ padding:6px 10px; font-size:12px; }
 .admin-footer{ margin-top:12px; text-align:right; }
 
+
 @media (max-width:680px){ .admin-modal{ width:94vw; padding:12px; } .admin-tools{ flex-direction:column; align-items:stretch; } .admin-tools .filters{ flex-wrap:wrap; } .admin-search{ min-width:auto; width:100%; } .admin-item-actions{ flex-direction:column; } .admin-item-actions .btn{ width:100%; } }
+/* ================================
+   MOBILE + PREMIUM POLISH (OVERRIDES)
+   Paste at the very end of styles.css
+   ================================ */
+
+/* 1) Fix review/contact form colors for dark theme (important) */
+.review-form,
+.form{
+  background: rgba(255,255,255,.03) !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+}
+
+.review-form label{
+  color: var(--text) !important;
+}
+
+.review-form input[type="text"],
+.review-form input[type="email"],
+.review-form input[type="tel"],
+.review-form input[type="password"],
+.review-form textarea,
+.form input,
+.form textarea{
+  background: rgba(0,0,0,.25) !important;
+  color: var(--text) !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+  box-shadow: none !important;
+}
+
+.review-form textarea::placeholder,
+.review-form input::placeholder,
+.form textarea::placeholder,
+.form input::placeholder{
+  color: rgba(255,255,255,.50) !important;
+}
+
+/* 2) Make review cards consistent (dark premium) */
+.review-item{
+  background: rgba(255,255,255,.03) !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  color: var(--text) !important;
+}
+
+.review-text{ color: var(--muted-strong) !important; }
+.review-date{ color: var(--muted) !important; }
+
+/* 3) Better mobile spacing + typography */
+@media (max-width: 520px){
+  :root{ --scroll-offset: 76px; }
+
+  .header{ padding: 14px 0 34px; }
+  .nav{ top: 6px; padding: 8px 10px; }
+  .container{ width: min(var(--max), 94vw); }
+
+  h1{ font-size: 32px; line-height: 1.05; }
+  .lead{ font-size: 15px; line-height: 1.6; }
+
+  .pill{ font-size: 12px; padding: 7px 10px; }
+
+  .hero{ gap: 16px; margin-top: 18px; }
+  .hero-card img{ height: 260px !important; }
+
+  .section{ padding: 54px 0; }
+
+  .gallery{ grid-template-columns: 1fr !important; }
+  .shot img{ height: 200px; }
+
+  .hero-cta{ gap: 10px; }
+  .btn{ width: 100%; justify-content: center; }
+  .btn-ghost{ width: 100%; }
+
+  .toast-container{ right: 12px; left: 12px; bottom: 12px; }
+  .toast{ border-radius: 14px; }
+}
+
+/* 4) Smooth, premium motion without being heavy */
+@media (prefers-reduced-motion: no-preference){
+  .card, .shot, .badge, .contact-card{
+    transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms ease, border-color 220ms ease;
+  }
+}
