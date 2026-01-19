@@ -825,3 +825,47 @@ input:focus, textarea:focus{
     transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms ease, border-color 220ms ease;
   }
 }
+/* ======================
+   MOBILE MENU FIX
+   ====================== */
+@media (max-width: 768px){
+  #mobileMenu{
+    position: fixed !important;
+    top: 64px;
+    left: 12px;
+    right: 12px;
+    width: auto !important;
+    border-radius: 18px;
+    backdrop-filter: blur(14px);
+    background: rgba(10,20,10,.92);
+  }
+
+  #mobileMenu a{
+    font-size: 16px;
+    padding: 14px 16px;
+  }
+}
+/* ======================
+   HERO MOBILE POLISH
+   ====================== */
+@media (max-width: 520px){
+  .hero{
+    margin-top: 12px;
+    gap: 14px;
+  }
+
+  .hero h1{
+    font-size: 30px;
+    line-height: 1.1;
+  }
+
+  .hero .lead{
+    font-size: 14.5px;
+  }
+
+  .hero-card img{
+    height: 220px !important;
+  }
+}
+
+
