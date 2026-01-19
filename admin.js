@@ -281,7 +281,7 @@ async function loadAll(){
 
   // Reviews
   const r = await sb.from('reviews')
-    .select('id,name,rating,text,approved,archived,created_at')
+    .select('id,name,rating,content,approved,archived,created_at')
     .order('created_at', { ascending: false })
     .limit(300);
   if(r.error){ console.warn(r.error); showToast('Σφάλμα φόρτωσης κριτικών'); }
