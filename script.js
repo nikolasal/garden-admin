@@ -223,12 +223,12 @@ if(reviewForm){
     reviewMsg.textContent = '';
 
     const { error } = await sb.from('reviews').insert({
-      name,
-      rating,
-      text,
-      approved: false,
-      archived: false,
-    });
+   name,
+   rating,
+   content: text,   // ✅ ΣΩΣΤΟ
+   approved: false,
+   archived: false,
+});
 
     submitBtn?.classList.remove('is-loading');
     submitBtn?.removeAttribute('disabled');
