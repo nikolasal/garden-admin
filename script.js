@@ -198,7 +198,7 @@ async function loadPublicReviews(){
           <div class="review-stars">${renderStars(r.rating)}</div>
           <div class="review-date">${new Date(r.created_at).toLocaleString('el-GR')}</div>
         </div>
-        <div class="review-text">${escapeHtml(r.text)}</div>
+        <div class="review-text">${escapeHtml(r.content)}</div>
       </div>
     </div>
   `).join('');
