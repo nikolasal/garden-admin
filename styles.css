@@ -1101,6 +1101,93 @@ input:focus, textarea:focus{
     padding: 48px 0 !important;
   }
 }
+/* ==========================
+   NUCLEAR MOBILE FIX (FINAL)
+   Paste at VERY END
+   ========================== */
+
+@media (max-width: 900px){
+
+  /* Force single column everywhere */
+  .hero, .about, .contact, .reviews-grid{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Fix “desktop spacing” */
+  .container{ width: 94vw !important; }
+  .header{ padding: 12px 0 28px !important; }
+  .section{ padding: 52px 0 !important; }
+  .hero{ margin-top: 12px !important; gap: 14px !important; }
+
+  /* Compact typography */
+  h1{ font-size: 30px !important; line-height: 1.08 !important; }
+  .lead{ font-size: 14.5px !important; line-height: 1.6 !important; max-width: none !important; }
+
+  /* Buttons full width */
+  .hero-cta{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  .btn, .btn-ghost{ width: 100% !important; justify-content:center !important; }
+
+  /* Hero image height */
+  .hero-card img{ height: 220px !important; }
+
+  /* Badges single column */
+  .hero-badges{ grid-template-columns: 1fr !important; }
+
+  /* Grids */
+  .cards, .gallery, .process, .pricing-grid{ grid-template-columns: 1fr !important; }
+  .shot img{ height: 200px !important; }
+
+  /* Mobile menu sheet full width */
+  #mobileMenu{
+    position: fixed !important;
+    left: 12px !important;
+    right: 12px !important;
+    top: 74px !important;
+    width: auto !important;
+    border-radius: 18px !important;
+    background: rgba(10,14,11,.92) !important;
+    backdrop-filter: blur(14px) !important;
+    border: 1px solid rgba(255,255,255,.12) !important;
+    box-shadow: 0 26px 90px rgba(0,0,0,.55) !important;
+    z-index: 1100 !important;
+  }
+
+  #mobileMenu a{ padding: 14px 14px !important; font-size:16px !important; }
+
+  /* Fix the WHITE section (testimonials / review light theme leftovers) */
+  .testimonials{
+    background: transparent !important;
+    color: var(--text) !important;
+    border-top: 1px solid rgba(255,255,255,.08);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+  .testimonial-card{
+    background: rgba(255,255,255,.03) !important;
+    color: var(--text) !important;
+    border: 1px solid rgba(255,255,255,.08) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,.22) !important;
+  }
+  .testimonials .section-head h2,
+  .testimonials .section-head p,
+  .testimonial-card blockquote,
+  .meta .location{
+    color: var(--muted-strong) !important;
+  }
+
+  /* Ensure forms stay dark */
+  .review-form label{ color: var(--text) !important; }
+  .review-form input, .review-form textarea{
+    background: rgba(0,0,0,.25) !important;
+    color: var(--text) !important;
+    border: 1px solid rgba(255,255,255,.12) !important;
+  }
+}
+
 
 
 
