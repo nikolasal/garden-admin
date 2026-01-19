@@ -176,7 +176,7 @@ async function loadPublicReviews(){
   if(!sb || !reviewList) return;
   const { data, error } = await sb
     .from('reviews')
-    .select('id,name,rating,text,created_at')
+    .select('id,name,rating,content,created_at')
     .eq('approved', true)
     .eq('archived', false)
     .order('created_at', { ascending: false })
